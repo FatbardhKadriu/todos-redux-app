@@ -5,10 +5,9 @@ import App from './App';
 
 import store from './store'
 
-console.log('Initial state: ', store.getState())
+// console.log('Initial state: ', store.getState())
 
 store.dispatch({ type: 'todos/todoAdded', payload: 'Learn about actions' })
-// log: 'Hi!'
 
 console.log('State after dispatch: ', store.getState())
 // log: {todos: [...], filters: {status, colors}, meaningOfLife: 42}
