@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 import Header from './features/header/Header'
-import TodoList from './features/todos/TodoList.js'
+import TodoList from './features/todos/TodoList'
 import Footer from './features/footer/Footer'
 
 function App() {
@@ -10,10 +10,6 @@ function App() {
       <nav>
         <section>
           <h1>Redux Fundamentals Example</h1>
-
-          <div className="navContent">
-            <div className="navLinks"></div>
-          </div>
         </section>
       </nav>
       <main>
@@ -26,8 +22,8 @@ function App() {
           </div>
         </section>
       </main>
-  </div>
-  );
+    </div>
+  )
 }
 
-export default App;
+export default App

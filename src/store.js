@@ -1,15 +1,13 @@
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import rootReducer from './reducer';
-import { sayHiOnDispatch, includeMeaningOfLife} from './exampleAddons/enhancers'
-import { print1, print2, print3 } from './exampleAddons/middleware';
-
+import rootReducer from './reducer'
+import { print1, print2, print3 } from './exampleAddons/middleware'
 
 const composedEnhancer = composeWithDevTools(
-    applyMiddleware(print1, print2, print3),
-    sayHiOnDispatch, 
-    includeMeaningOfLife);
+  // Add whatever middleware you actually want to use here
+  applyMiddleware(print1, print2, print3)
+  // other store enhancers if any
+)
 
-const store = createStore(rootReducer, composedEnhancer);
-
-export default store;
+const store = createStore(rootReducer, composedEnhancer)
+export default store
