@@ -10,9 +10,24 @@ function nextTodoId(todos) {
   return maxId + 1
 }
 
+// Action creators
+export const todosLoaded = todos => {
+  return {
+    type: 'todos/todosLoaded',
+    payload: todos
+  }
+}
+
+export const todosAdded = todo => {
+  return {
+    type: 'todos/todoAdded',
+    payload: todo
+  }
+}
+
 // Thunk function
 export async function fetchTodos(dispatch, getState) {
-  setTimeout(() => dispatch({ type: 'todos/todosLoaded', payload: todos }), 0);
+  setTimeout(() => dispatch(todosLoaded(todos)), 0);
 }
 
 export default function todosReducer(state = initialState, action) {
